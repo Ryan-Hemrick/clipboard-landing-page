@@ -1,0 +1,394 @@
+:root {
+  --clr-cyan: hsl(171, 66%, 44%); 
+  --clr-blue: hsl(233, 100%, 69%);
+  --clr-neutral-700: hsl(210, 10%, 33%);
+  --clr-neutral-400: hsl(201, 11%, 66%);
+  --clr-neutral-200: hsl(220, 18%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff--Bai-Jamjuree: 'Bai Jamjuree', sans-serif;
+}
+
+
+
+/*############################
+General Styles
+##############################*/
+
+body {
+  background-color: var(--clr-white);
+  min-height: 100vh;
+  font-family: var(--ff--Bai-Jamjuree);
+  font-weight: 400;
+  color: var(--clr-neutral-700)
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.938rem;
+  border-radius: 2rem;
+  color: var(--clr-white);
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0px -2px 0px 0px hsla(0, 0%, 0%, 20%);
+  transition-duration: 250ms;
+}
+.primary-cta {
+  background-color: var(--clr-cyan);
+}
+.secondary-cta {
+  background-color: var(--clr-blue);
+}
+button:hover,
+button:focus {
+  opacity: 0.75;
+}
+
+.hero button:first-of-type,
+.cta button:first-of-type  {
+  margin-bottom: 1.375rem;
+}
+
+@media (min-width: 50em) {
+  .hero button:first-of-type,
+  .cta button:first-of-type {
+    margin-bottom: 0;
+  }
+  button {
+    width: 230px;
+    font-size: 1.125rem;
+  }
+}
+
+
+/*############################
+Utility Classes // Layout Styles
+##############################*/
+
+.container {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+
+  padding: 0rem 1.75rem;
+}
+
+/* Defining max-widths to match design spec on larger devices */
+@media (min-width: 50em) {
+  .container {
+    margin: 0 auto;
+  }
+  .container-sm {
+    max-width: 750px;
+  }
+  .container-md {
+    max-width: 800px;
+  }
+  .container-lg {
+    max-width: 1150px;
+  }
+  .container-full {
+    max-width: 100%;
+  }
+
+  /* 2 column layout in .snippets section */
+  .grid-col-2 {
+    grid-template-columns: 1.125fr 1fr;
+  }
+  .content.grid-col-2 {
+    gap: 6.5rem;
+  }
+
+  /* 3 column layout in .workflow section */
+  .grid-col-3 .content__features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .flex-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+
+
+/*############################
+Font Styles
+##############################*/
+
+h1,h2,h3,button {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.438rem;
+}
+
+p {
+  color: var(--clr-neutral-400);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-700);
+  font-size: 1.125rem;
+  transition-duration: 250ms;
+}
+a:hover,
+a:focus {
+  color: var(--clr-cyan);
+}
+
+/* Adjusting font-sizes for larger devices */
+@media (min-width: 50em) {
+  p {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 2.75rem;
+  }
+  h2 {
+    font-size: 2.125rem;
+  }
+}
+
+
+
+/*############################
+Header Styles
+##############################*/
+
+header {
+  background-image: url('../images/bg-header-mobile.png');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5rem;
+}
+
+.hero__img {
+  margin-bottom: 3.5rem;
+}
+.hero__header {
+  margin-bottom: 0.875rem;
+}
+.hero__blurb {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 50em) {
+  header {
+    background-image: url('../images/bg-header-desktop.png');
+    background-position: 0% 0%;
+    padding: 7.5rem 0 9rem 0;
+  }
+  .hero__blurb {
+    font-size: 1.25rem;
+  }
+}
+
+
+/*############################
+Main // Shared <section> Styles
+##############################*/
+
+main {
+  display: grid;
+  /* Vertical gap between each <section> */
+  gap: 8rem;
+  padding: 7rem 0;
+}
+
+/* Vertical gap between each section's .intro & .content elements */
+.snippets .container,
+.clipboard .container,
+.workflow .container {
+  gap: 3.5rem;
+}
+
+.intro__header {
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: grid;
+}
+
+.content__features {
+  display: grid;
+  gap: 3rem;
+}
+
+.content__features__header {
+  margin-bottom: 0.75rem;
+}
+
+.content__features img {
+  margin: 0 auto 1.75rem auto;
+  height: 2.25rem;
+  width: auto;
+}
+
+@media (min-width: 50em) {
+  .content__features__blurb {
+    font-size: 1rem;
+  }
+}
+
+
+
+/*############################
+Snippets <section> Styles
+##############################*/
+
+.snippets .content {
+  gap: 3.5rem;
+}
+
+/* Adjusting content to match design spec for larger devices */
+@media (min-width: 50rem) {
+  .snippets .intro,
+  .clipboard .intro  {
+    max-width: 725px;
+  }
+  .snippets .container {
+    gap: 4.75rem;
+    padding: 0;
+  }
+  .snippets .content__img {
+    transform: translateX(-4rem);
+  }
+  .snippets .content {
+    align-items: center;
+  }
+  .snippets .content__features {
+    text-align: left;
+    justify-items: flex-start;
+    padding: 0 5% 5% 0; 
+    max-width: 380px;
+  }
+}
+
+
+
+/*############################
+Clipboard, Workflow, Clients, CTA <section> Styles
+##############################*/
+
+.clients__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  align-items: center;
+}
+
+.cta .intro p {
+  margin-bottom: 3rem;
+}
+
+/* Adjusting content to match design spec for larger devices */
+@media (min-width: 50rem) {
+  .clipboard .container {
+    gap: 5.5rem;
+  }
+  .workflow .container {
+    gap: 4.375rem;
+  }
+  .clients__list {
+    flex-direction: row;
+    gap: 6rem;
+  }
+}
+
+
+
+/*############################
+Footer Styles
+##############################*/
+
+footer {
+  background-color: var(--clr-neutral-200);
+  padding: 3rem 0;
+}
+
+footer .container {
+  gap: 2.75rem;
+}
+
+.footer__logo img {
+  width: 3.25rem;  
+}
+
+.footer__nav__links {
+  display: grid;
+  gap: 1.875rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.footer__nav__links li:nth-of-type(1) {
+  grid-area: one;
+}
+.footer__nav__links li:nth-of-type(2) {
+  grid-area: two;
+}
+.footer__nav__links li:nth-of-type(3) {
+  grid-area: three;
+}
+.footer__nav__links li:nth-of-type(4) {
+  grid-area: four;
+}
+.footer__nav__links li:nth-of-type(5) {
+  grid-area: five;
+}
+
+.footer__socials__icons {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer__socials__icons svg path {
+  transition-duration: 250ms;
+}
+.footer__socials__icons a:hover svg path,
+.footer__socials__icons a:focus svg path {
+  fill: var(--clr-cyan);
+}
+
+/* Adjusting content to match design spec for larger devices */
+@media (min-width: 50em) {
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__nav__links { 
+    justify-items: flex-start;
+    gap: 1.5rem 5.625rem;
+    grid-template-areas:
+      'one three five'
+      'two four .';
+  }
+  .footer__socials__icons {
+    gap: 1.5rem;
+  }
+}
