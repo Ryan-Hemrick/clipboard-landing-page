@@ -29,7 +29,7 @@ li {
 
 button {
   width: 100%;
-  padding: 0.938rem;
+  padding: 1rem;
   border-radius: 2rem;
   color: var(--clr-white);
   border: none;
@@ -61,6 +61,7 @@ button:focus {
   button {
     width: 230px;
     font-size: 1.125rem;
+    padding: 0.938rem;
   }
 }
 
@@ -75,6 +76,10 @@ Utility Classes // Layout Styles
   text-align: center;
 
   padding: 0rem 1.75rem;
+}
+
+.flex-wrapper {
+  width: 100%;
 }
 
 /* Defining max-widths to match design spec on larger devices */
