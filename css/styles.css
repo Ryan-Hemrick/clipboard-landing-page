@@ -194,7 +194,7 @@ header {
   header {
     background-image: url('../images/bg-header-desktop.png');
     background-position: 0% 0%;
-    padding: 7.5rem 0 9rem 0;
+    padding-top: 7.5rem;
   }
   .hero__blurb {
     font-size: 1.25rem;
@@ -244,6 +244,9 @@ main {
 }
 
 @media (min-width: 50em) {
+  main {
+    padding: 9rem 0;
+  }
   .content__features__blurb {
     font-size: 1rem;
   }
