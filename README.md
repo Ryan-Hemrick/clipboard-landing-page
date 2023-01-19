@@ -27,7 +27,7 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 
 
 ### Links
-- Live Site URL: 
+- Live Site URL: https://jazzy-faun-001c49.netlify.app
 
 
 ## My process
